@@ -23,3 +23,4 @@ modal.addEventListener('click', (event) => {
         originalImg.classList.remove("img-open");
     }
 });
+
