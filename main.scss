@@ -17,28 +17,11 @@ body {
     background: rgb(233,232,227);
     padding: 28px;
     color: rgb(46,46,46);
-
-    &:after {
-        display: none;
-        content: url(assets/2019-06-27\_18:07:02.876.JPG) 
-                 url(assets/2019-07-11\_12:07:50.681.JPG)
-                 url(assets/2019-08-12\_22:19:08.199.JPG)
-                 url(assets/2019-10-02\_15:17:22.796.JPG)
-                 url(assets/2019-10-17\_17:50:32.914.JPG)
-                 url(assets/2019-10-17\_21:05:52.096.JPG)
-                 url(assets/2019-12-08\_15:50:11.841.JPG)
-                 url(assets/2019-12-17\_22:16:49.554.JPG)
-                 url(assets/2019-12-18\_15:50:01.326.JPG)
-                 url(assets/2020-07-17\_20:25:58.167.JPG)
-                 url(assets/IMG_1904.JPG)
-                 url(assets/IMG_1897.JPG)
-                 url(assets/IMG_1953.JPG);
-    }
 }
 
 header {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row wrap-reverse;
     align-items: center;
 
     h1 {
@@ -55,9 +38,7 @@ header {
 
         &:before {
             background: rgb(233,232,227);
-            width: 150%;
             height: 101%;
-            left: -10px;
             z-index: -1;
         }
 
@@ -100,7 +81,7 @@ header {
 }
 
 main {
-    padding: 30px 20px;
+    padding: 30px 0px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -230,6 +211,29 @@ footer {
     header {
         h1 {
             margin-left: 68px;
+            &:before {
+                width: 160%;
+                left: -15px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        h1 {
+            margin-top: 20px;
+            margin-left: 15px;
+            font-size: 2.8em;
+
+            &:before {
+                width: 100%;
+                left: -5px;
+            }
+        }
+
+        .squares {
+            margin: 0 auto;
         }
     }
 }
