@@ -1,0 +1,39 @@
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+footer p {
+  font-family: "Josefin Sans", sans-serif;
+  position: relative;
+  display: inline-block;
+  z-index: 4;
+}
+footer p:after, footer p:before {
+  content: "";
+  display: block;
+  position: absolute;
+}
+footer p:before {
+  background: #e9e8e3;
+  width: 110%;
+  height: 101%;
+  left: -5%;
+  z-index: -1;
+}
+footer p:after {
+  background: #2e2e2e;
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -2;
+}
+footer p a {
+  text-decoration: none;
+  color: inherit;
+}
+footer p a:hover {
+  color: #57b0d3;
+}

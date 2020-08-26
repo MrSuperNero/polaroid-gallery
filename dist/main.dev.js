@@ -20,7 +20,8 @@ previews.forEach(function (preview) {
     var altText = preview.alt;
     caption.textContent = altText;
   });
-}); // exit full-screen view of photo
+});
+s; // exit full-screen view of photo
 
 modal.addEventListener('click', function (event) {
   if (event.target.classList.contains('modal')) {

@@ -1,0 +1,196 @@
+@keyframes fadeRight {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeRight {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeRight {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeRight {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes fadeDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes expand {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100vw;
+  }
+}
+@-o-keyframes expand {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100vw;
+  }
+}
+@-moz-keyframes expand {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100vw;
+  }
+}
+@-webkit-keyframes expand {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100vw;
+  }
+}
+main {
+  padding: 30px 0px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  opacity: 0;
+  animation: fadeRight 0.5s ease forwards;
+  animation-delay: 4.7s;
+  -moz-animation: fadeRight 0.5s ease forwards;
+  -moz-animation-delay: 4.7s;
+  -o-animation: fadeRight 0.5s ease forwards;
+  -o-animation-delay: 4.7s;
+  -webkit-animation: fadeRight 0.5s ease forwards;
+  -webkit-animation-delay: 4.7s;
+}
+main .photo {
+  width: 300px;
+  height: auto;
+  padding: 15px;
+  margin: 15px;
+  box-shadow: 0px 3px 7px rgba(46, 46, 46, 0.5);
+}
+main .photo .img-container {
+  overflow: hidden;
+}
+main .photo .img-container img {
+  width: 270px;
+  height: 270px;
+  object-fit: cover;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+main .photo .img-container img:hover {
+  transform: scale(1.2);
+}
+main .photo p {
+  font-family: "Indie Flower", serif;
+  text-align: center;
+  font-size: 1.4em;
+  margin-top: 15px;
+}
+
+.modal {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.full-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: all 0.25s ease-out;
+  box-shadow: 0px 0px 50px 10px #313131;
+}
+
+.caption {
+  color: white;
+  font-family: "Indie Flower", sans-serif;
+  font-size: 2em;
+  position: absolute;
+  text-align: center;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -5%);
+}
+
+.modal-open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.img-open {
+  transform: translate(-50%, -50%) scale(1);
+}

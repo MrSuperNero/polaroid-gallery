@@ -24,7 +24,7 @@ previews.forEach((preview) => {
         caption.textContent = altText;
     });
 });
-
+s
 // exit full-screen view of photo
 modal.addEventListener('click', (event) => {
     if (event.target.classList.contains('modal')) {
