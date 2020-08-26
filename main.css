@@ -94,6 +94,7 @@ main .photo .img-container img {
   height: 270px;
   object-fit: cover;
   transition: all 0.3s ease-out;
+  transform-origin: 20% 40%;
   cursor: pointer;
 }
 main .photo .img-container img:hover {

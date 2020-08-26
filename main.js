@@ -1,9 +1,19 @@
+let root = document.documentElement;
 const modal = document.querySelector(".modal"),
       previews = document.querySelectorAll(".photo img"),
       originalImg = document.querySelector(".full-img"),
       caption = document.querySelector(".caption");
 
 previews.forEach((preview) => {
+
+    preview.addEventListener("mousemove", (e) => {
+        console.log(e);
+        // let xRate = (e.offsetX > 120) ? 5 : 3;
+        // let yRate = (e.offsetY > 120) ? 5 : 3;
+
+        preview.style.transformOrigin = e.offsetX / 3 + "% " + e.offsetY / 3 + "%";
+    });
+
     preview.addEventListener('click', () => {
         modal.classList.add("modal-open");
         originalImg.classList.add("img-open");
