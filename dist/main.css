@@ -1,5 +1,117 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+@keyframes fadeRight {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeRight {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeRight {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeRight {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes fadeDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes expand {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100vw;
+  }
+}
+@-o-keyframes expand {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100vw;
+  }
+}
+@-moz-keyframes expand {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100vw;
+  }
+}
+@-webkit-keyframes expand {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100vw;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -28,6 +140,11 @@ header h1 {
   z-index: 3;
   position: relative;
   display: inline-block;
+  opacity: 0;
+  animation: fadeDown 2s ease-out forwards;
+  -moz-animation: fadeDown 2s ease-out forwards;
+  -o-animation: fadeDown 2s ease-out forwards;
+  -webkit-animation: fadeDown 2s ease-out forwards;
 }
 header h1:after, header h1:before {
   content: "";
@@ -41,11 +158,18 @@ header h1:before {
 }
 header h1:after {
   background: #2e2e2e;
-  width: 100vw;
   height: 100%;
   top: 0;
   transform: translateX(-96px);
   z-index: -2;
+  animation: expand 2s ease-in-out forwards;
+  animation-delay: 4s;
+  -moz-animation: expand 2s ease-in-out forwards;
+  -moz-animation-delay: 4s;
+  -o-animation: expand 2s ease-in-out forwards;
+  -o-animation-delay: 4s;
+  -webkit-animation: expand 2s ease-in-out forwards;
+  -webkit-animation-delay: 4s;
 }
 header .squares {
   display: flex;
@@ -55,6 +179,26 @@ header .squares {
 header .squares span {
   height: 1.6em;
   width: 1.6em;
+  opacity: 0;
+  animation: fadeDown 2s ease-out forwards;
+  -moz-animation: fadeDown 2s ease-out forwards;
+  -o-animation: fadeDown 2s ease-out forwards;
+  -webkit-animation: fadeDown 2s ease-out forwards;
+}
+header .squares span:nth-child(1) {
+  animation-delay: 300ms;
+}
+header .squares span:nth-child(2) {
+  animation-delay: 600ms;
+}
+header .squares span:nth-child(3) {
+  animation-delay: 900ms;
+}
+header .squares span:nth-child(4) {
+  animation-delay: 1200ms;
+}
+header .squares span:nth-child(5) {
+  animation-delay: 1500ms;
 }
 header .squares span:nth-child(1) {
   background-color: #c43f7b;
@@ -78,6 +222,15 @@ main {
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
+  opacity: 0;
+  animation: fadeRight 0.5s ease forwards;
+  animation-delay: 4.7s;
+  -moz-animation: fadeRight 0.5s ease forwards;
+  -moz-animation-delay: 4.7s;
+  -o-animation: fadeRight 0.5s ease forwards;
+  -o-animation-delay: 4.7s;
+  -webkit-animation: fadeRight 0.5s ease forwards;
+  -webkit-animation-delay: 4.7s;
 }
 main .photo {
   width: 300px;
