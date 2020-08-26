@@ -6,10 +6,11 @@ var modal = document.querySelector(".modal"),
     originalImg = document.querySelector(".full-img"),
     caption = document.querySelector(".caption");
 previews.forEach(function (preview) {
+  // detph mouse tracking to photos
   preview.addEventListener("mousemove", function (e) {
-    console.log(e);
     preview.style.transformOrigin = e.offsetX / 3 + "% " + e.offsetY / 3 + "%";
-  });
+  }); // enlarge photos on click
+
   preview.addEventListener('click', function () {
     modal.classList.add("modal-open");
     originalImg.classList.add("img-open"); // dynamically change text and image
@@ -19,7 +20,8 @@ previews.forEach(function (preview) {
     var altText = preview.alt;
     caption.textContent = altText;
   });
-});
+}); // exit full-screen view of photo
+
 modal.addEventListener('click', function (event) {
   if (event.target.classList.contains('modal')) {
     modal.classList.remove("modal-open");

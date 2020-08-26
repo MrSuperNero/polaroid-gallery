@@ -6,12 +6,12 @@ const modal = document.querySelector(".modal"),
 
 previews.forEach((preview) => {
 
+    // detph mouse tracking to photos
     preview.addEventListener("mousemove", (e) => {
-        console.log(e);
-
         preview.style.transformOrigin = e.offsetX / 3 + "% " + e.offsetY / 3 + "%";
     });
 
+    // enlarge photos on click
     preview.addEventListener('click', () => {
         modal.classList.add("modal-open");
         originalImg.classList.add("img-open");
@@ -25,6 +25,7 @@ previews.forEach((preview) => {
     });
 });
 
+// exit full-screen view of photo
 modal.addEventListener('click', (event) => {
     if (event.target.classList.contains('modal')) {
         modal.classList.remove("modal-open");
