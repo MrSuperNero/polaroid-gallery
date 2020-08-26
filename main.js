@@ -1,5 +1,4 @@
-let root = document.documentElement;
-const modal = document.querySelector(".modal"),
+var modal = document.querySelector(".modal"),
       previews = document.querySelectorAll(".photo img"),
       originalImg = document.querySelector(".full-img"),
       caption = document.querySelector(".caption");
