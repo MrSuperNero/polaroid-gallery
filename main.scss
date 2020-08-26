@@ -146,6 +146,7 @@ main {
     font-family: 'Indie Flower', sans-serif;
     font-size: 2em;
     position: absolute;
+    text-align: center;
     bottom: 5%;
     left: 50%;
     transform: translate(-50%, -5%);
@@ -241,6 +242,6 @@ footer {
     }
 
     .full-img {
-        height: 50%;  
+        height: 40%;  
     }
 }
