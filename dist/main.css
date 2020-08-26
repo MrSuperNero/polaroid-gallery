@@ -121,7 +121,6 @@ main .photo p {
 
 .full-img {
   position: absolute;
-  height: 70%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.5);
@@ -196,6 +195,10 @@ footer p a:hover {
     width: 160%;
     left: -15px;
   }
+
+  .full-img {
+    height: 70%;
+  }
 }
 @media screen and (max-width: 767px) {
   header h1 {
@@ -209,5 +212,9 @@ footer p a:hover {
   }
   header .squares {
     margin: 0 auto;
+  }
+
+  .full-img {
+    height: 50%;
   }
 }

@@ -8,8 +8,6 @@ previews.forEach((preview) => {
 
     preview.addEventListener("mousemove", (e) => {
         console.log(e);
-        // let xRate = (e.offsetX > 120) ? 5 : 3;
-        // let yRate = (e.offsetY > 120) ? 5 : 3;
 
         preview.style.transformOrigin = e.offsetX / 3 + "% " + e.offsetY / 3 + "%";
     });

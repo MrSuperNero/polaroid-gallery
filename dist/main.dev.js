@@ -7,9 +7,7 @@ var modal = document.querySelector(".modal"),
     caption = document.querySelector(".caption");
 previews.forEach(function (preview) {
   preview.addEventListener("mousemove", function (e) {
-    console.log(e); // let xRate = (e.offsetX > 120) ? 5 : 3;
-    // let yRate = (e.offsetY > 120) ? 5 : 3;
-
+    console.log(e);
     preview.style.transformOrigin = e.offsetX / 3 + "% " + e.offsetY / 3 + "%";
   });
   preview.addEventListener('click', function () {
